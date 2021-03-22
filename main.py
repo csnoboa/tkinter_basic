@@ -9,6 +9,7 @@ class Application(tk.Frame):
 
     def create_widgets(self):
         self.listWidgets = []
+        self.listWidgetsButtons = []
 
         self.entrythingy = tk.Entry(self)
         self.entrythingy.pack(side="top")
@@ -29,7 +30,7 @@ class Application(tk.Frame):
         self.delete_button = tk.Button(self)
         self.delete_button["text"] = "Deletar todas as tarefas"
         self.delete_button["command"] = self.delete_all
-        self.delete_button.pack(side="top")
+        self.delete_button.pack()
 
 
 
@@ -49,6 +50,7 @@ class Application(tk.Frame):
     def delete_all(self):
         for i in self.listWidgets:
             i.destroy()
+
 
 
 root = tk.Tk()
